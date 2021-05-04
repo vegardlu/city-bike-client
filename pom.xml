@@ -13,7 +13,7 @@
     <groupId>lundeberg.tech</groupId>
     <artifactId>city-bike-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>orange-lights</name>
+    <name>City Bike Client</name>
     <description>City Bike Client</description>
 
     <properties>
