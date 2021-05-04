@@ -1,2 +1,6 @@
 server:
   port: 7002
+
+endpoint:
+  stationstatus: https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json
+  stationinformation: https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json

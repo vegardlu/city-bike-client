@@ -21,8 +21,8 @@
         <td th:text="${station.stationId}"></td>
         <td th:text="${station.name}"></td>
         <td th:text="${station.capacity}"></td>
-        <td th:text="${stationMap.get(station.stationId).numBikesAvailable}"></td>
-        <td th:text="${stationMap.get(station.stationId).numDocksAvailable}"></td>
+        <td th:text="${stationStatusMap.get(station.stationId).numBikesAvailable}"></td>
+        <td th:text="${stationStatusMap.get(station.stationId).numDocksAvailable}"></td>
     </tr>
     </tbody>
 </table>

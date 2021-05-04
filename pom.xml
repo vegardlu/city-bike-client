@@ -171,4 +171,18 @@
             </plugin>
         </plugins>
     </build>
+
+    <developers>
+        <developer>
+            <id>vegardlu</id>
+            <email>vegard.hillestad@gmail.com</email>
+            <name>Vegard L. Hillestad</name>
+            <timezone>+1</timezone>
+            <organization>lundeberg.tech</organization>
+            <roles>
+                <role>developer</role>
+                <role>architect</role>
+            </roles>
+        </developer>
+    </developers>
 </project>
