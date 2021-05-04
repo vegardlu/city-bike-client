@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>City Bike Station Information by Vegard Hillestad</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Station Id</th>
+        <th>Name</th>
+        <th>Capacity</th>
+    </tr>
+    <tr th:each="station:${stations}">
+        <td th:text="${station.name}"></td>
+        <td th:text="${station.stationId}"></td>
+        <td th:text="${station.capacity}"></td>
+    </tr>
+</table>
+</body>
+</html>
