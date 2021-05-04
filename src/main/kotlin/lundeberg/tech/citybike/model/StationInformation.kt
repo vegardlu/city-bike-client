@@ -6,13 +6,3 @@ data class StationInformation(
     val address: String,
     val capacity: Int
 )
-
-data class StationInformationWrapper(
-    val lastUpdated: Int,
-    val ttl: Int,
-    val data: StationInformationData
-)
-
-data class StationInformationData(
-    val stations: List<StationInformation>
-)

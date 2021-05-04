@@ -5,8 +5,8 @@ import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.features.json.*
 import io.ktor.client.request.*
-import lundeberg.tech.citybike.model.CityBikeDataWrapper
-import lundeberg.tech.citybike.model.StationInformationWrapper
+import lundeberg.tech.citybike.model.CityBikeData
+import lundeberg.tech.citybike.model.StationInformation
 import lundeberg.tech.citybike.model.StationStatus
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -29,10 +29,10 @@ class StationInformationController {
     }
 
     suspend fun stationInformation() = httpClient
-        .get<StationInformationWrapper>("https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json")
+        .get<CityBikeData<StationInformation>>("https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json")
 
     suspend fun stationStatus() = httpClient
-        .get<CityBikeDataWrapper<StationStatus>>("https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json")
+        .get<CityBikeData<StationStatus>>("https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json")
 }
 
 val httpClient = HttpClient(CIO) {
