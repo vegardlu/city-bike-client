@@ -42,4 +42,8 @@ fun Model.stationStatusMap(endpoint: String) =
         get<CityBikeData<StationStatus>>(endpoint).data.stations.associateBy { it.stationId }
     )
 
-inline fun <reified T> get(url: String) = runBlocking { httpClient.get<T>(url) }
+inline fun <reified T> get(url: String) = runBlocking {
+    httpClient.get<T>(url) {
+        header("Client-Identifier", "lundebergtech-citybikeclient")
+    }
+}
